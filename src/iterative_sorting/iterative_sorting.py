@@ -108,9 +108,8 @@ def counting_sort(arr, maximum=None):
 
 
 # COOL STUFF HERE: loop through original array. for each value in original, assign the corresponding value
-# of bucket_list[elem], which returns the count of how many instances of elem there are, and also tells us which
-# index to insert elem into (for our new array). Also don't forget to shift the index -1 (as seen on line 116)
-# in order to start at index 0 instead of 1.
+# of bucket_list[elem], which returns the count of how many instances of elem there are, as the index of new_arr to insert the current element.
+# Also don't forget to shift the index -1 (as seen on line 116) in order to start at index 0 instead of 1.
     for i, elem in enumerate(arr):
 
         #We have a condition here to prevent accidental traversal into negatives from decrementing
@@ -122,7 +121,7 @@ def counting_sort(arr, maximum=None):
 
     return arr
 
-test_arr = [10,10,3,5,10,3,7,6,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1]
+test_arr = [1,7,9,2,5,10,8]
 
 print("Counting Sort: ",counting_sort(test_arr, 10))
 
